@@ -23,4 +23,17 @@ Modern APIs often require dynamic filtering, sorting, and pagination. QueryBuild
 - Keep the tool lightweight , dependency-free , and EF-Core friendly
 
 ### Non-Goals
-- No support for complex joins or groupings , frontend integration , orderBy dynamic properties , advanced filters with nested properties in the initial release 
+- No support for complex joins or groupings , frontend integration , orderBy dynamic properties , advanced filters with nested properties in the initial release
+
+## Contribution Guidelines
+This is a small , evolving project. If you'd like to contribute:
+- Feel free to fork the repo and submit a pull request with clear description
+- No formal release or branching rules yet - Please keep the 'master' branch stable
+- If you are adding new features, consider updating the README with example
+- For questions or ideas , feel free to open an issue.
+## Coding Standards
+- Use .NET 8.0/C# 12
+
+  
+
+
