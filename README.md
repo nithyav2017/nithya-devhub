@@ -1,5 +1,5 @@
 # QueryBuilder Tool for .NET
-**Overview
+### Overview
 QueryBuilder is a lightweight utility for dynamically composing LINQ queries in Entity Framework Core. It simplifies filtering, sorting, and 
 pagination logic.
 
