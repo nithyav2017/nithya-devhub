@@ -16,7 +16,8 @@ namespace TestQueryBuilder
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Define MyViewModel as keyless
-            modelBuilder.Entity<User>().HasKey(u => u.Id);        
+            modelBuilder.Entity<User>()
+                 .HasKey(x => x.Id);
 
             base.OnModelCreating(modelBuilder);
         }

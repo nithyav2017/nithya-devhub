@@ -106,6 +106,7 @@ C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQueryBuilder.AssemblyInfoInputs.cache
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQueryBuilder.AssemblyInfo.cs
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQueryBuilder.csproj.CoreCompileInputs.cache
+C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQueryBuilder.sourcelink.json
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQuer.659C1532.Up2Date
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\TestQueryBuilder.dll
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Tests\TestQueryBuilder\obj\Release\net8.0\refint\TestQueryBuilder.dll

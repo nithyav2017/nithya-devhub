@@ -5,9 +5,11 @@ namespace QueryBuilder
 {
     public class QueryBuilder<T>
     {
-        private IQueryable<T> _query;
-       
+        private IQueryable<T> _query;       
         private Expression<Func<T, bool>> _expression;
+        private int? _skip;
+        private int? _take;
+
 
         public QueryBuilder(IQueryable<T> source)
         {
@@ -23,8 +25,21 @@ namespace QueryBuilder
             => BuildExpression(property, op, value, useAnd:true);
 
         public QueryBuilder<T> OrElse(string property, string op , object value )
-            => BuildExpression(property, op, value, useAnd:false);  
+            => BuildExpression(property, op, value, useAnd:false);
         
+        public QueryBuilder<T> Skip(int count)
+        {
+            _skip = count;
+            return this;
+        }
+
+        public QueryBuilder<T> Take(int count)
+        {
+            _take = count;
+            return this;
+        }
+
+
         public Expression<Func<T, bool>> Build()
         {
             return _expression ?? (x => true);
@@ -69,5 +84,18 @@ namespace QueryBuilder
             return this;
 
         }
+
+        public IQueryable<T> Build(IQueryable<T> source)
+        {
+            var query = source.Where(Build());
+
+            if (_skip.HasValue)
+                query = query.Skip(_skip.Value);
+            if (_take.HasValue)
+                query = query.Take(_take.Value);
+
+            return query;
+        }
+
     }
 }

@@ -5,6 +5,7 @@ C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.AssemblyInfoInputs.cache
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.AssemblyInfo.cs
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.csproj.CoreCompileInputs.cache
+C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.sourcelink.json
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.dll
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\refint\QueryBuilder.dll
 C:\Users\nithy\OneDrive\Documentos\Nithya\CoreTraining\QueryBuilder\QueryBuilder.Core\QueryBuilder\obj\Debug\net8.0\QueryBuilder.pdb
