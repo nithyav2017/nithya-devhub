@@ -12,6 +12,23 @@ namespace QueryBuilder.Utility
 {
     public static class ResultHelper 
     {
+        public static object SafeConvert(object value, Type targetType)
+        {
+            if (value == null) return null;
+
+            var nonNullableType = Nullable.GetUnderlyingType(targetType) ?? targetType;
+
+            // Already the right type
+            if (nonNullableType.IsInstanceOfType(value))
+                return value;
+
+            // Primitive types (IConvertible)
+            if (value is IConvertible)
+                return Convert.ChangeType(value, nonNullableType);
+
+            // Collections or complex types → return as-is
+            return value;
+        }
         public static MethodInfo GetJoinMethod(string joinKind, Type outerType, Type innerType,Type keyType,  Type resultType)
         {
             var methodName = joinKind switch

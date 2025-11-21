@@ -159,6 +159,7 @@ namespace QueryBuilder
             Expression combined = null;
             var param = Expression.Parameter(type, "x");
 
+
             foreach (var f in filters)
             {
                 var property = Expression.PropertyOrField(param, f.PropertyName);
@@ -167,54 +168,64 @@ namespace QueryBuilder
                 var elementType = property.Type;
                 IEnumerable values;
                 Type? listType;
-                MethodInfo containsMethod;
+                MethodInfo containsMethod; 
 
                 switch (f.Operator)
                 {
                     
                     case "==":
                         expr = Expression.Equal(property,
-                            Expression.Constant(f.Value, property.Type));
+                            Expression.Constant( QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
 
                     case "!=":
                         expr = Expression.NotEqual(property,
-                            Expression.Constant(f.Value, property.Type));
+                              Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
 
                     case ">":
                         expr = Expression.GreaterThan(property,
-                            Expression.Constant(f.Value, property.Type));
+                              Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
 
                     case ">=":
                         expr = Expression.GreaterThanOrEqual(property,
-                            Expression.Constant(f.Value, property.Type));
+                               Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
 
                     case "<":
                         expr = Expression.LessThan(property,
-                            Expression.Constant(f.Value, property.Type));
+                              Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
 
                     case "<=":
                         expr = Expression.LessThanOrEqual(property,
-                            Expression.Constant(f.Value, property.Type));
+                              Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , property.Type));
                         break;
                     case "StartsWith":
                         expr = Expression.Call(property,
                                                typeof(string).GetMethod("StartsWith", new[] { typeof(string) })!,
-                                               Expression.Constant(f.Value, typeof(string)));
+                                                  Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , typeof(string)));
+                      
                         break;
                     case "EndsWith":
                         expr = Expression.Call(property,
                                               typeof(string).GetMethod("EndsWith", new[] { typeof(string) })!,
-                                               Expression.Constant(f.Value, typeof(string)));
+                                               Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , typeof(string)));
                         break;
                     case "Contains":
                         expr = Expression.Call(property,
                                               typeof(string).GetMethod("Contains", new[] { typeof(string) })!,
-                                               Expression.Constant(f.Value, typeof(string)));
+                                            Expression.Constant(QueryBuilder.Utility.ResultHelper.SafeConvert(f.Value, property.Type)
+                            , typeof(string)));
                         break;
                     case "IN": 
                           elementType = property.Type;                       

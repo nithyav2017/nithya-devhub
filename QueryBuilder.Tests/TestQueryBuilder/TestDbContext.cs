@@ -45,6 +45,8 @@ namespace TestQueryBuilder
                 .WithOne(d => d.Product)
                 .HasForeignKey(d => d.ProductID);
 
+            
+
 
             base.OnModelCreating(modelBuilder);
         }
