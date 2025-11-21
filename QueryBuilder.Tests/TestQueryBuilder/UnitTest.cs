@@ -1,6 +1,9 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using QueryBuilder;
-
+using System;
+using System.Dynamic;
+using System.Net;
+ 
 namespace TestQueryBuilder
 {
     public class Tests
@@ -11,32 +14,34 @@ namespace TestQueryBuilder
         public void Setup()
         {
             var options = new DbContextOptionsBuilder<TestDbContext>()
-                            .UseInMemoryDatabase("TestDb")
+                            .UseSqlServer("Server=localhost, 1433;Database=AdventureWorks2022;User Id=sa;Password=Learning@12;TrustServerCertificate=True")
                             .Options;
-            _context = new TestDbContext(options);
-            _context.Users.Add(new User { Id = 1, Name = "Jack", Age = 40, IsActive = true });
-            _context.Users.Add(new User { Id=2, Name = "Glade", Age = 37, IsActive=true  });
-            _context.Users.Add(new User { Id=3, Name = "Sara", Age = 48, IsActive = false  });
-            _context.Users.Add(new User { Id = 4, Name = "Juli", Age = 52, IsActive = false  });
-            _context.SaveChanges();
+            _context = new TestDbContext(options); 
+
         }
 
         [Test]
         public void QueryBuilder_FilterByAgeTest()
         {
-            QueryBuilder<User> queryBuilder = new();
+            QueryBuilder<SalesOrder.Product> queryBuilder = new();
 
-            var filter = queryBuilder
-                            .AndWhere("Age", ">", 30)
-                            .AndWhere("Age", "<", 50)
-                            .AndWhere("IsActive", "==", true).Skip(1).Build(_context.Users).ToList();
+            _context.Products.AsEnumerable();
+            _context.SalesOrderDetails.AsEnumerable();
+            _context.SalesOrderHeaders.AsEnumerable();
 
-           
-            Console.WriteLine("Users matched:");
-            foreach (var user in filter)
-                Console.WriteLine($"{user.Name}, Age: {user.Age}, IsActive: {user.IsActive}");
-
-            Assert.AreEqual(1, filter.Count);
+                var filter = queryBuilder                           
+                               .AddJoin(typeof(SalesOrder.SalesOrderDetail), "ProductID", "ProductID", "Inner")
+                               .AddJoin(typeof(SalesOrder.SalesOrderHeader), "SalesOrderID", "SalesOrderID", "Inner")
+                               .AndWhere("Name", "Contains", "Black")
+                               .AndWhere("UnitPrice", ">", 2000M, typeof(SalesOrder.SalesOrderDetail))
+                               .OrElse("OrderQty", ">", 20 , typeof(SalesOrder.SalesOrderDetail)) 
+                               .AndWhere("SalesOrderDetailID", "IN", (115,156), typeof(SalesOrder.SalesOrderDetail))
+                               .Build(_context.Products, _context).Cast<dynamic>() ;
+                           
+ 
+            var sql = filter.ToQueryString(); 
+            
+            Assert.AreEqual(2, filter.Count());
         }
 
         [TearDown]

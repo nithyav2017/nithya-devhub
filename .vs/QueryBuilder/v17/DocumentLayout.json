@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\nithy\\OneDrive\\Documentos\\Nithya\\CoreTraining\\QueryBuilder\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|c:\\users\\nithy\\onedrive\\documentos\\nithya\\coretraining\\querybuilder\\querybuilder.tests\\testquerybuilder\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|solutionrelative:querybuilder.tests\\testquerybuilder\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|c:\\users\\nithy\\onedrive\\documentos\\nithya\\coretraining\\querybuilder\\querybuilder.tests\\testquerybuilder\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|solutionrelative:querybuilder.tests\\testquerybuilder\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|c:\\users\\nithy\\onedrive\\documentos\\nithya\\coretraining\\querybuilder\\querybuilder.tests\\testquerybuilder\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|solutionrelative:querybuilder.tests\\testquerybuilder\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|c:\\users\\nithy\\onedrive\\documentos\\nithya\\coretraining\\querybuilder\\querybuilder.tests\\testquerybuilder\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72CC889C-0CBB-7A30-7C3F-ED629961A306}|QueryBuilder.Tests\\TestQueryBuilder\\TestQueryBuilder.csproj|solutionrelative:querybuilder.tests\\testquerybuilder\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{813B7A13-9488-9581-D6C7-F0A4E5874E49}|QueryBuilder.Core\\QueryBuilder\\QueryBuilder.csproj|c:\\users\\nithy\\onedrive\\documentos\\nithya\\coretraining\\querybuilder\\querybuilder.core\\querybuilder\\querybuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,24 +70,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TestDbContext.cs",
               "DocumentMoniker": "C:\\Users\\nithy\\OneDrive\\Documentos\\Nithya\\CoreTraining\\QueryBuilder\\QueryBuilder.Tests\\TestQueryBuilder\\TestDbContext.cs",
               "RelativeDocumentMoniker": "QueryBuilder.Tests\\TestQueryBuilder\\TestDbContext.cs",
               "ToolTip": "C:\\Users\\nithy\\OneDrive\\Documentos\\Nithya\\CoreTraining\\QueryBuilder\\QueryBuilder.Tests\\TestQueryBuilder\\TestDbContext.cs",
               "RelativeToolTip": "QueryBuilder.Tests\\TestQueryBuilder\\TestDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBMAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-06T23:00:09.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\nithy\\OneDrive\\Documentos\\Nithya\\CoreTraining\\QueryBuilder\\QueryBuilder.Tests\\TestQueryBuilder\\User.cs",
               "RelativeDocumentMoniker": "QueryBuilder.Tests\\TestQueryBuilder\\User.cs",
@@ -95,8 +95,7 @@
               "RelativeToolTip": "QueryBuilder.Tests\\TestQueryBuilder\\User.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T21:57:49.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T21:57:49.903Z"
             },
             {
               "$type": "Document",
@@ -108,12 +107,11 @@
               "RelativeToolTip": "QueryBuilder.Core\\QueryBuilder\\QueryBuilder.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAIwFwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T21:38:52.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T21:38:52.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UnitTest.cs",
               "DocumentMoniker": "C:\\Users\\nithy\\OneDrive\\Documentos\\Nithya\\CoreTraining\\QueryBuilder\\QueryBuilder.Tests\\TestQueryBuilder\\UnitTest.cs",
               "RelativeDocumentMoniker": "QueryBuilder.Tests\\TestQueryBuilder\\UnitTest.cs",
