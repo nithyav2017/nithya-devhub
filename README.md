@@ -57,8 +57,10 @@ Modern APIs often require dynamic filtering, sorting, and pagination. QueryBuild
     -Clear error handling for type mismatches in Property/parameter expressions.
 ##  Front End compatibility   
     -QueryBuilder is designed to work with frontend framewroks and traditional MVC view through a .NET API.
-    -Works with AngularJS, ReactJS, MVC Views, jQuery, or any client that can send JSON payloads.All query construction is handled server-side; clients never need to know EF Core navigation paths or database column names.
-    ##Example Payload:
+    -Works with AngularJS, ReactJS, MVC Views, jQuery, or any client that can send JSON payloads.
+    -All query construction is handled server-side.
+    -clients never need to know EF Core navigation paths or database column names.
+    -Example Payload:
         -User can specify the root entity dynamically in the JSON request.QueryBuilder will resolve the correct DbSet<T> internally.
         -Filters on related entities automatically create the required joins.
         -Clients do not need to specify JOIN conditions explicitly (Automated JOIN resolution).
