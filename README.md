@@ -55,7 +55,26 @@ Modern APIs often require dynamic filtering, sorting, and pagination. QueryBuild
     -Supports filter with "==",">=","<=",">","<","!=", "IN","NOT IN", "LIKE" 
 ## Expression Tree Validation
     -Clear error handling for type mismatches in Property/parameter expressions.
-    
+##  Front End compatibility   
+    -QueryBuilder is designed to work with frontend framewroks and traditional MVC view through a .NET API.
+    -Works with AngularJS, ReactJS, MVC Views, jQuery, or any client that can send JSON payloads.All query construction is handled server-side; clients never need to know EF Core navigation paths or database column names.
+    -## Example Payload:
+        -User can specify the root entity dynamically in the JSON request.QueryBuilder will resolve the correct DbSet<T> internally.
+        -Filters on related entities automatically create the required joins.
+        -Clients do not need to specify JOIN conditions explicitly (Automated JOIN resolution).
+        -Pagination support
+        
+        `{ "RootEntity": "Product",
+            "Filters":
+                        [ { "Field": "ProductName", "Condition": "==", "Value": "Road-150 Red, 56" },
+                          { "Field": "OrderQuantity", "Condition": ">", "Value": 20 } ], 
+            "Skip": 0, 
+            "Take": 50 }`
+## Benefits
+    - No client-side DB knowledge required
+    - Dynamic queries without writing raw SQL
+    - Safe and type-checked
+            
 ### Non-Goals [Initial Release Limitations]
 - No support for complex joins or groupings , frontend integration , orderBy dynamic properties , advanced filters with nested properties in the initial release
 
